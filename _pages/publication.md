@@ -9,9 +9,9 @@ redirect_from:
 ---
 
 -------
-- **Xu Zheng**, et, al, Wei Cheng, Dongsheng Luo, LM$^2$otifs:An Explainable Framework for Text Authorship Detection, Manuscripts, [paper](https://placeholder)[code](https://placeholder)  
+- **Xu Zheng**, et, al, Wei Cheng, Dongsheng Luo, LM$^2$otifs:An Explainable Framework for Text Authorship Detection, Manuscripts, [paper](https://placeholder),[code](https://placeholder)  
 
-- **Xu Zheng**,Farhad Shirani, Zhuomin Chen, Chaohao Lin, Wei Cheng, Wenbo Guo, Dongsheng Luo, F-Fidelity: A Robust Framework for Faithfulness Evaluation of Explainable AI. ICLR 2025, [paper](https://arxiv.org/abs/2410.02970)[code](https://github.com/AslanDing/Finetune-Fidelity)  
+- **Xu Zheng**,Farhad Shirani, Zhuomin Chen, Chaohao Lin, Wei Cheng, Wenbo Guo, Dongsheng Luo, F-Fidelity: A Robust Framework for Faithfulness Evaluation of Explainable AI. ICLR 2025, [paper](https://arxiv.org/abs/2410.02970),[code](https://github.com/AslanDing/Finetune-Fidelity)  
 
 - Zhuomin Chen, Jingchao Ni, Hojat Allah Salehi, **Xu Zheng**, Esteban Schafir, Farhad Shirani, Dongsheng Luo,``Explanation-Preserving Augmentation for Semi-Supervised Graph Representation Learning''. Preprint, [paper](https://arxiv.org/abs/2410.12657)
 
