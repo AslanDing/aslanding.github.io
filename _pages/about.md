@@ -14,7 +14,7 @@ redirect_from:
 Education
 ---------
 In 2018, he graduated from Chongqing University[(CQU)](https://www.cqu.edu.cn) majored in Electronic Science and Technology. After that, he graduated from the University of Electronic Science and Technology of China [(UESTC)](https://www.uest.edu.cn)
-with a master's degree in 2021. His supervisor was [Dr. Yali Zheng](http://www.uestc-vml.net/) and research topic was Human mesh recovery.
+with a master's degree in 2021. His supervisor was [Dr. Yali Zheng](http://www.uestc-vml.net/) and research topic was human mesh recovery.
 Now, he is a phd student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/). 
 Research area are related to XAI, Time Series Learning, Graph Neural Network, Self-Supervised Learning, GenAI. 
 
@@ -44,6 +44,6 @@ Tools
 Python, PyTorch, Tensorflow, C/C++
 
 
-Acknowledge
+Acknowledgement
 ------
 This page is copied from [academicpages template](https://github.com/academicpages/academicpages.github.io). Thanks for the contributors.
