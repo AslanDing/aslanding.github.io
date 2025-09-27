@@ -15,8 +15,10 @@ Education
 ---------
 In 2018, he graduated from Chongqing University[(CQU)](https://www.cqu.edu.cn) majored in Electronic Science and Technology. After that, he graduated from the University of Electronic Science and Technology of China [(UESTC)](https://www.uest.edu.cn)
 with a master's degree in 2021. His supervisor was [Dr. Yali Zheng](http://www.uestc-vml.net/) and research topic was human mesh recovery.
-Now, he is a phd student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/). 
+Now, he is a Ph.D. student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/).  He is supposed to graduate in **Summer, 2026**.
 Research area are related to XAI, Time Series Learning, Graph Neural Network, Self-Supervised Learning, GenAI. 
+**Now, this guy is looking for a job. If you can provide potential working position information, he would appreciate it.**
+
 
 Research Experience
 --------
