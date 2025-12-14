@@ -15,7 +15,7 @@ redirect_from:
 
 - Shouwei Gao, **Xu Zheng**, et. al, Dongsheng Luo, Wenqian Dong, Loxia: Self-Guided Pruning for Scientific AI Foundation Models, Preprint 
 
-- **Xu Zheng**\*, Farhad Shirani\*, Tianchun Wang, Shouwei Gao, Wenqian Dong, Wei Cheng, Dongsheng Luo, PAC Learnability under Explanation-Preserving Graph Perturbations, Arxiv 2024, [paper](https://arxiv.org/abs/2402.05039),[code](https://github.com/AslanDing/forICML24)
+- **Xu Zheng**\*, Farhad Shirani\*, Tianchun Wang, Shouwei Gao, Wenqian Dong, Wei Cheng, Dongsheng Luo, PAC Learnability under Explanation-Preserving Graph Perturbations, Preprint, [paper](https://arxiv.org/abs/2402.05039),[code](https://placeholder)
 
 - Tianchun Wang, Farhad Shirani, **Xu Zheng**, Wei Cheng, Haifeng Chen, Dongsheng Luo and Xiang Zhang, Chiseling the Graph: An Edge-Sculpting Method for Explaining Graph Neural Networks. Preprint, [paper](https://assets-eu.researchsquare.com/files/rs-5414037/v1_covered_6a0cd4e5-64f7-4fda-81e4-2cc81fe977da.pdf?c=1732871401)
 
