@@ -13,13 +13,11 @@ redirect_from:
 
 - **Xu Zheng**, et, al, Wei Cheng, Dongsheng Luo, LM$^2$otifs:An Explainable Framework for Machine-Generated Texts Detection, Preprint, [paper](https://placeholder),[code](https://placeholder)  
 
-- Shouwei Gao, **Xu Zheng**, et. al, Dongsheng Luo, Wenqian Dong, Loxia: Self-Guided Pruning for Scientific AI Foundation Models, Preprint 
+- Shouwei Gao, **Xu Zheng**, et. al, Dongsheng Luo, Wenqian Dong, Loxia: Self-Guided Pruning for Scientific AI Foundation Models, **IPDPS 2026**, [paper](https://placeholder),[code](https://placeholder)  
 
 - **Xu Zheng**\*, Farhad Shirani\*, Tianchun Wang, Shouwei Gao, Wenqian Dong, Wei Cheng, Dongsheng Luo, PAC Learnability under Explanation-Preserving Graph Perturbations, Preprint, [paper](https://arxiv.org/abs/2402.05039),[code](https://placeholder)
 
 - Tianchun Wang, Farhad Shirani, **Xu Zheng**, Wei Cheng, Haifeng Chen, Dongsheng Luo and Xiang Zhang, Chiseling the Graph: An Edge-Sculpting Method for Explaining Graph Neural Networks. Preprint, [paper](https://assets-eu.researchsquare.com/files/rs-5414037/v1_covered_6a0cd4e5-64f7-4fda-81e4-2cc81fe977da.pdf?c=1732871401)
-
-
 
 - Sipeng Chen, **Xu Zheng**, et, al, Dongsheng Luo, Adaptive Dice Loss for Extremely Imbalanced Segementation in Wetland Delineation. **ICLR 2025 Workshop**, [paper](https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/iclr2025/60/paper.pdf),[code](https://placeholder)  
 
