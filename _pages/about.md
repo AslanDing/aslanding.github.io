@@ -17,7 +17,7 @@ In 2018, he graduated from Chongqing University[(CQU)](https://www.cqu.edu.cn) m
 with a master's degree in 2021. His supervisor was [Dr. Yali Zheng](http://www.uestc-vml.net/) and research topic was human mesh recovery.
 Now, he is a Ph.D. student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/) and [Dr. Mo Sha](https://users.cs.fiu.edu/~msha/).  
 <!-- He is supposed to graduate in **Summer, 2026**. -->
-Research area are related to XAI, Time Series Learning, Graph Neural Network, Self-Supervised Learning, GenAI. 
+Research area are related to XAI, LLM Agents, Time Series Learning, Graph Modeling, Self-Supervised Learning. 
 <!-- **Now, this guy is looking for a job. If you can provide potential working position information, he would appreciate it.** -->
 
 
@@ -35,6 +35,7 @@ Working Experience
 4. TA(Teaching Assistant) System programing, From May 2023 to Aug 2023.
 5. AI and design(ZTE), related to Android camera image processing, from July 2021 to Jan. 2023
 
+
 Publications
 -------
 - one paper accepted by  ICLR 2025
@@ -42,11 +43,4 @@ Publications
 - one paper(AutoTCL, [best paper award](https://ai4ts.github.io/ijcai2023)) accepted by  AI4TS workshop at IJCAI2023
 - one paper(AdaTCL) accepted by  Workshop on Re-design Industrial Control Systems with Security (RICSS) @ IEEE EuroS&P 2023 
 
-Tools
-------
-Python, PyTorch, Tensorflow, C/C++
 
-
-Acknowledgement
-------
-This page is copied from [academicpages template](https://github.com/academicpages/academicpages.github.io). Thanks for the contributors.
