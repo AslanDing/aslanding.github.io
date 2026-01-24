@@ -9,6 +9,10 @@ redirect_from:
 ---
 
 -------
+- **Xu Zheng**, Chaohao Lin, et al., Dongsheng Luo, ``GMAIS: Graph-based Memory for Agent Inference Scaling'', Manusctript, [paper](https://placeholder),[code](https://placeholder)    
+
+- **Xu Zheng**, Zhuomin Chen, et al., Dongsheng Luo, ``Environment Copilot: A Graph-based Framework for Action Error Diagnosis and Decision'', Under Review, [paper](https://placeholder),[code](https://placeholder)    
+
 - **Xu Zheng**,  Chaohao Lin, et, al, Dongsheng Luo, SF$^2$Bench: Evaluating Data-Driven Models for Compound Flood Forecasting in South Florida, Preprint, [paper](https://placeholder),[code](https://github.com/AslanDing/SFBench)  
 
 - **Xu Zheng**, et, al, Wei Cheng, Dongsheng Luo, LM$^2$otifs:An Explainable Framework for Machine-Generated Texts Detection, Preprint, [paper](https://placeholder),[code](https://placeholder)  

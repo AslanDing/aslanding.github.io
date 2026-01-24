@@ -15,17 +15,16 @@ Education
 ---------
 In 2018, he graduated from Chongqing University[(CQU)](https://www.cqu.edu.cn) majored in Electronic Science and Technology. After that, he graduated from the University of Electronic Science and Technology of China [(UESTC)](https://www.uest.edu.cn)
 with a master's degree in 2021. His supervisor was [Dr. Yali Zheng](http://www.uestc-vml.net/) and research topic was human mesh recovery.
-Now, he is a Ph.D. student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/) and [Dr. Mo Sha](https://users.cs.fiu.edu/~msha/).  
-<!-- He is supposed to graduate in **Summer, 2026**. -->
-Research area are related to XAI, LLM Agents, Time Series Learning, Graph Modeling, Self-Supervised Learning. 
+Now, he is a Ph.D. student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/) and [Dr. Mo Sha](https://users.cs.fiu.edu/~msha/).   Research area are related to **XAI**, **LLM Agents**, **Time Series Learning**, **Graph Modeling**, and **Self-Supervised Learning**. 
 <!-- **Now, this guy is looking for a job. If you can provide potential working position information, he would appreciate it.** -->
 
 
 Research Experience
 --------
-1. Explainable AI and Graph Neural network, from Sept. 2023 to Now
-2. Time Series Contrastive Learning with Adaptive Augmentation, from Jan. 2023 to Sept. 2023
-3. Human Mesh Recovery, recover human mesh from a single picture, from July 2019 to Mar. 2021
+1. LLM & LLM Agents, from Jan. 2025 to Now 
+2. Explainable AI and Graph Neural network, from Sept. 2023 to Now
+3. Time Series Contrastive Learning with Adaptive Augmentation, from Jan. 2023 to Sept. 2023
+4. Human Mesh Recovery, recover human mesh from a single picture, from July 2019 to Mar. 2021
 
 Working Experience
 ---------
