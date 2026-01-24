@@ -21,18 +21,18 @@ Now, he is a Ph.D. student in Florida International University [(FIU)](https://w
 
 Research Experience
 --------
-1. LLM & LLM Agents, from Jan. 2025 to Now 
-2. Explainable AI and Graph Neural network, from Sept. 2023 to Now
-3. Time Series Contrastive Learning with Adaptive Augmentation, from Jan. 2023 to Sept. 2023
-4. Human Mesh Recovery, recover human mesh from a single picture, from July 2019 to Mar. 2021
+1. **LLM & LLM Agents**, from Jan. 2025 to Present。 
+2. **Explainable AI Evaluation**, from Sept. 2023 to Present.
+3. **XAI for Scientific Discovery**, from Jan. 2023 to Present.
+4. **Human Mesh Recovery**, from July 2019 to Mar. 2021.
 
 Working Experience
 ---------
-1. Intern(NEC Lab) , From May 2024 to Aug. 2024.
-2. TA(Teaching Assistant) Java, From Jan. 2024 to Apr. 2024.
-3. TA(Teaching Assistant) intro to AI, From Aug. 2023 to Dec 2023.
-4. TA(Teaching Assistant) System programing, From May 2023 to Aug 2023.
-5. AI and design(ZTE), related to Android camera image processing, from July 2021 to Jan. 2023
+1. **Intern(NEC Lab)** , From May 2024 to Aug. 2024.
+2. **TA(Teaching Assistant)** Java Programming, From Jan. 2024 to Apr. 2024.
+3. **TA(Teaching Assistant)** intro to AI, From Aug. 2023 to Dec 2023.
+4. **TA(Teaching Assistant)** System programing, From May 2023 to Aug 2023.
+5. **AI and design(ZTE)**, related to Android camera image processing, from July 2021 to Jan. 2023
 
 
 Publications
