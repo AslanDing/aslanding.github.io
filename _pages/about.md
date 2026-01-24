@@ -37,9 +37,9 @@ Working Experience
 
 Publications
 -------
-- one paper accepted by  ICLR 2025
-- two paper accepted by  ICLR 2024
-- one paper(AutoTCL, [best paper award](https://ai4ts.github.io/ijcai2023)) accepted by  AI4TS workshop at IJCAI2023
-- one paper(AdaTCL) accepted by  Workshop on Re-design Industrial Control Systems with Security (RICSS) @ IEEE EuroS&P 2023 
+- One paper accepted by  **ICLR 2025**
+- Two paper accepted by  **ICLR 2024**
+- One paper(AutoTCL, [best paper award](https://ai4ts.github.io/ijcai2023)) accepted by  **AI4TS workshop at IJCAI2023**
+- One paper(AdaTCL) accepted by  Workshop on Re-design Industrial Control Systems with Security (RICSS) @ **IEEE EuroS&P 2023** 
 
 
