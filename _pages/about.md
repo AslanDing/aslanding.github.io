@@ -16,7 +16,7 @@ Education
 <!-- I am looking for a job right now. Any job information would be appreciated. A perfect job would be, but not limited to, these titles: Research Scientist, Applied Scientist, Machine Learning/AI Engineer, and Data Analyst. -->
 <!-- More details about my research can be found on my homepage: https://aslanding.github.io/. -->
 
-Xu is a Ph.D. student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/) and [Dr. Mo Sha](https://users.cs.fiu.edu/~msha/).   Research area is related to **XAI**, **LLM Agents**, **Time Series Learning**, **Graph Modeling**, and **Self-Supervised Learning**. 
+Xu is a Ph.D. student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/) and [Dr. Mo Sha](https://users.cs.fiu.edu/~msha/).   Research area is related to **AI4Science**,**XAI**, **LLM Agents**, **Time Series Learning**, and **Graph Modeling**. 
 In 2018, he graduated from Chongqing University[(CQU)](https://www.cqu.edu.cn) majored in Electronic Science and Technology. After that, he graduated from the University of Electronic Science and Technology of China [(UESTC)](https://www.uest.edu.cn) with a master's degree in 2021. His supervisor was [Dr. Yali Zheng](http://www.uestc-vml.net/) and research topic was human mesh recovery.
 <!-- **Now, this guy is looking for a job. If you can provide potential working position information, he would appreciate it.** -->
 
