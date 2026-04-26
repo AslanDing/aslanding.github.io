@@ -9,6 +9,8 @@ redirect_from:
 ---
 
 -------
+- Zhuomin Chen, Hojat Allah Salehi, Esteban Schafir, **Xu Zheng**, et al., Dongsheng Luo, ``Addressing Structural Distribution Shift in Explanations for Graph Neural Networks'', TPAMI, [paper](), [code](https://placeholder)
+
 - **Xu Zheng**, Chaohao Lin, et al., Dongsheng Luo, ``GMAIS: Graph-based Memory for Agent Inference Scaling'', Manusctript, [paper](https://placeholder),[code](https://placeholder)    
 
 - **Xu Zheng**, Zhuomin Chen, et al., Dongsheng Luo, ``Environment Copilot: A Graph-based Framework for Action Error Diagnosis and Decision'', Under Review, [paper](https://placeholder),[code](https://placeholder)    
