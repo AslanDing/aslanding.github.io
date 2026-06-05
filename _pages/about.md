@@ -18,7 +18,8 @@ Education
 
 Xu is a Ph.D. student in Florida International University [(FIU)](https://www.fiu.edu), Supervisor [Dr. Dongsheng Luo](https://users.cs.fiu.edu/~dluo/) and [Dr. Mo Sha](https://users.cs.fiu.edu/~msha/).   Research area is related to **AI4Science**,**XAI**, **LLM Agents**, **Time Series Learning**, and **Graph Modeling**. 
 In 2018, he graduated from Chongqing University[(CQU)](https://www.cqu.edu.cn) majored in Electronic Science and Technology. After that, he graduated from the University of Electronic Science and Technology of China [(UESTC)](https://www.uest.edu.cn) with a master's degree in 2021. His supervisor was [Dr. Yali Zheng](http://www.uestc-vml.net/) and research topic was human mesh recovery.
-**Now, he is supposed to graduate at Summer term 2027, and looking for a job now. If you can provide potential working position information, such as Applied Scientist, Machine Learning Engineer, or Research Scientist, etc, he would appreciate it.**
+
+**He is supposed to graduate at Summer term 2027, and looking for a job now. If you can provide potential working position information, such as Applied Scientist, Machine Learning Engineer, or Research Scientist, etc, he would appreciate it.**
 
 
 Research Experience
