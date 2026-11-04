@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<title>REFRACT</title>
+		<style>
+html, body, #canvas { margin: 0; padding: 0; border: 0; }
+body { color: #c6f1ff; background-color: #0b0e1a; overflow: hidden; touch-action: none; height: 100%; }
+/* The engine sizes the canvas (window x devicePixelRatio, game0/13 §2). Never set its width/height here;
+   pixelated only guards against browser resampling at fractional DPR. */
+#canvas { display: block; image-rendering: pixelated; image-rendering: crisp-edges; }
+#canvas:focus { outline: none; }
+#status { position: absolute; inset: 0; background-color: #0b0e1a; display: flex; flex-direction: column;
+	justify-content: center; align-items: center; visibility: hidden; font: 14px monospace; gap: 14px; }
+#status-splash { width: 128px; height: 128px; image-rendering: pixelated; }
+#status-progress { width: 240px; height: 6px; appearance: none; border: 0; background: #1b1f3b; }
+#status-progress::-webkit-progress-bar { background: #1b1f3b; }
+#status-progress::-webkit-progress-value { background: #5fb3d9; }
+#status-progress::-moz-progress-bar { background: #5fb3d9; }
+#status-notice { display: none; background: #3e2731; border: 1px solid #a22633; color: #ead4aa; padding: 1rem;
+	margin: 0 2rem; text-align: center; line-height: 1.4; }
+#home { position: fixed; left: 12px; top: 10px; z-index: 5; color: #c6f1ff; font: 13px monospace;
+	text-decoration: none; opacity: 0.7; transition: opacity 0.4s; }
+#home.hidden { opacity: 0; pointer-events: none; }
+#status-start { display: none; font: 16px monospace; color: #0b0e1a; background: #c6f1ff; border: 0; padding: 8px 22px;
+	cursor: pointer; letter-spacing: 2px; box-shadow: 0 0 0 2px #0b0e1a, 0 0 0 4px #5fb3d9; }
+#status-start:hover, #status-start:focus { background: #ffffff; outline: none; }
+#status-hint { display: none; font: 12px monospace; color: #5a6988; text-align: center; line-height: 1.6; }
+		</style>
+		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+
+	</head>
+	<body>
+		<canvas id="canvas">你的浏览器不支持 canvas。</canvas>
+		<noscript>需要启用 JavaScript。</noscript>
+		<a id="home" href="/">← 返回主页</a>
+		<div id="status">
+			<img id="status-splash" src="index.png" alt="">
+			<div id="status-text">REFRACT · 加载中</div>
+			<progress id="status-progress"></progress>
+			<button id="status-start" type="button">点击开始 · CLICK TO START</button>
+			<div id="status-hint">WASD 移动 · 左键 攻击 · 空格 闪避 · 右键 射击 · F11 / 游戏内按钮 全屏<br>
+				声音默认关闭，按 M 键或在标题菜单打开<br>
+				Chrome / Edge / Firefox 桌面版 · 存档在浏览器本地</div>
+			<div id="status-notice"></div>
+		</div>
+
+		<script>
+// ---- REFRACT additions (game0/09 §5, game0/13 §7.2) -------------------------------------------------
+(function () {
+	const params = new URLSearchParams(window.location.search);
+	const debug = params.get('debug') === '1';
+	const canvas = () => document.getElementById('canvas');
+	// the shell's own text follows ?lang=, else the browser (the game itself also remembers the player's choice)
+	const lang = params.get('lang') || ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en');
+	window.__shellLang = lang;
+	if (lang === 'en') {
+		document.documentElement.lang = 'en';
+		document.getElementById('home').textContent = '← Back to the homepage';
+		document.getElementById('status-text').textContent = 'REFRACT · loading';
+		document.getElementById('status-hint').innerHTML = 'WASD move · left click attack · Space dodge · right click shoot · F11 / in-game button fullscreen<br>'
+			+ 'Sound is off by default: press M or use the title menu to turn it on<br>'
+			+ 'Desktop Chrome / Edge / Firefox · saves stay in this browser';
+	}
+	// 0) exact canvas sizing (export uses canvas_resize_policy = None). Godot's own adaptive sizing floors the
+	//    CSS width to whole px, which squeezes the canvas by 1 px at fractional DPR (e.g. 110% zoom) and makes
+	//    the browser drop a pixel column. Here backing = floor(inner * dpr) and CSS size = backing / dpr,
+	//    fractional px included, so every canvas pixel lands on exactly one device pixel.
+	function fitCanvas() {
+		const c = canvas();
+		const dpr = window.devicePixelRatio || 1;
+		const cw = document.documentElement.clientWidth || window.innerWidth;
+		const ch = document.documentElement.clientHeight || window.innerHeight;
+		const w = Math.max(1, Math.floor(cw * dpr + 1e-4));
+		const h = Math.max(1, Math.floor(ch * dpr + 1e-4));
+		if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
+		c.style.width = (w / dpr) + 'px';
+		c.style.height = (h / dpr) + 'px';
+	}
+	window.addEventListener('resize', fitCanvas);
+	(function watchDpr() {   // zoom or a move to another monitor changes the DPR without always firing resize
+		const mq = window.matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`);
+		mq.addEventListener('change', () => { fitCanvas(); watchDpr(); }, { once: true });
+	}());
+	fitCanvas();
+	window.__fitCanvas = fitCanvas;
+	// 1) mirror console output so ego-browser can read engine logs
+	window.__gdLogs = [];
+	for (const k of ['log', 'warn', 'error']) {
+		const orig = console[k].bind(console);
+		console[k] = (...a) => {
+			window.__gdLogs.push([k, Date.now(), a.map(String).join(' ')]);
+			if (window.__gdLogs.length > 3000) window.__gdLogs.shift();
+			orig(...a);
+		};
+	}
+	window.addEventListener('error', (e) => window.__gdLogs.push(['error', Date.now(), String(e.message)]));
+	// 2) browser-reserved keys: keep them from scrolling or searching while the game has focus (F5/F11/F12 stay)
+	const BLOCK = new Set(['Tab', ' ', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', '/', "'", 'F3', '`']);
+	window.addEventListener('keydown', (e) => { if (document.activeElement === canvas() && BLOCK.has(e.key)) e.preventDefault(); });
+	// 3) mouse: wheel never scrolls the page, middle click never auto-scrolls, side buttons never navigate back
+	window.addEventListener('wheel', (e) => { if (e.target === canvas()) e.preventDefault(); }, { passive: false });
+	for (const t of ['mousedown', 'mouseup', 'auxclick']) {
+		window.addEventListener(t, (e) => { if (e.target === canvas() && e.button >= 1) e.preventDefault(); });
+	}
+	// 4) leaving mid-run asks first; the game sets window.__inRun
+	window.addEventListener('beforeunload', (e) => { if (window.__inRun) { e.preventDefault(); e.returnValue = ''; } });
+	// 5) the back-to-homepage link: hidden in iframes and in debug captures, fades when the mouse rests
+	const home = document.getElementById('home');
+	if (window.self !== window.top || debug) home.remove();
+	let hideTimer = 0;
+	window.addEventListener('mousemove', (e) => {
+		if (!home.isConnected) return;
+		if (e.clientY < 60) home.classList.remove('hidden');
+		clearTimeout(hideTimer);
+		hideTimer = setTimeout(() => home.classList.add('hidden'), 3000);
+	});
+	// 6) debug only: record the playback rate of every sample the engine starts (checks the combo pitch)
+	if (debug && window.AudioContext) {
+		window.__gdAudioStats = { contexts: 0, bufferSources: 0, worklets: 0 };
+		const AC = window.AudioContext;
+		window.AudioContext = class extends AC { constructor(...a) { super(...a); window.__gdAudioStats.contexts++; window.__gdAudioCtx = this; } };
+		const cbs = BaseAudioContext.prototype.createBufferSource;
+		window.__gdAudioRates = [];
+		BaseAudioContext.prototype.createBufferSource = function (...a) {
+			window.__gdAudioStats.bufferSources++;
+			const src = cbs.apply(this, a);
+			setTimeout(() => { window.__gdAudioRates.push(+src.playbackRate.value.toFixed(3)); if (window.__gdAudioRates.length > 400) window.__gdAudioRates.shift(); }, 0);
+			return src;
+		};
+		if (window.AudioWorkletNode) {
+			const AW = window.AudioWorkletNode;
+			window.AudioWorkletNode = class extends AW { constructor(...a) { super(...a); window.__gdAudioStats.worklets++; } };
+		}
+	}
+	if (debug && window.AudioBufferSourceNode) {
+		window.__gdAudio = [];
+		const start = AudioBufferSourceNode.prototype.start;
+		AudioBufferSourceNode.prototype.start = function (...args) {
+			try {
+				window.__gdAudio.push([Date.now(), this.playbackRate.value, this.buffer ? this.buffer.duration : 0]);
+				if (window.__gdAudio.length > 400) window.__gdAudio.shift();
+			} catch (err) { /* ignore */ }
+			return start.apply(this, args);
+		};
+	}
+}());
+		</script>
+
+		<script src="index.js"></script>
+		<script>
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":16494224,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_THREADS_ENABLED = false;
+const engine = new Engine(GODOT_CONFIG);
+
+(function () {
+	const statusOverlay = document.getElementById('status');
+	const statusProgress = document.getElementById('status-progress');
+	const statusNotice = document.getElementById('status-notice');
+	let initializing = true;
+	let statusMode = '';
+
+	function setStatusMode(mode) {
+		if (statusMode === mode || !initializing) return;
+		if (mode === 'hidden') {
+			statusOverlay.remove();
+			initializing = false;
+			return;
+		}
+		statusOverlay.style.visibility = 'visible';
+		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
+		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
+		statusMode = mode;
+	}
+
+	function displayFailureNotice(err) {
+		console.error(err);
+		const en = window.__shellLang === 'en';
+		const msg = err instanceof Error ? err.message : (typeof err === 'string' ? err : (en ? 'Something went wrong.' : '发生未知错误。'));
+		statusNotice.textContent = msg + (en ? '\nPlease use an up-to-date desktop Chrome, Edge or Firefox.' : '\n请使用最新版 Chrome / Edge / Firefox 桌面浏览器。');
+		setStatusMode('notice');
+		initializing = false;
+	}
+
+	const missing = Engine.getMissingFeatures({ threads: GODOT_THREADS_ENABLED });
+	if (missing.length !== 0) {
+		displayFailureNotice((window.__shellLang === 'en' ? 'This browser lacks features the game needs:\n' : '缺少运行所需的浏览器功能：\n') + missing.join('\n'));
+		return;
+	}
+	// Download first, start on a click (game0/09 §5 "点击开始"): the click is the user gesture browsers want before
+	// audio may play, so the engine's AudioContext starts running. ?autostart=1 (tests, ego lite) skips the click,
+	// and so does ?start=1 (the homepage's cover link: the game opens on its title, silent until the player turns
+	// the sound on, so there is no gesture to wait for; the first key or click later wakes the audio).
+	setStatusMode('progress');
+	const startButton = document.getElementById('status-start');
+	const startHint = document.getElementById('status-hint');
+	const params = new URLSearchParams(window.location.search);
+	const exe = GODOT_CONFIG.executable;
+	const pack = GODOT_CONFIG.mainPack || (exe + '.pck');
+	engine.config.update({
+		'onProgress': function (current, total) {
+			if (current > 0 && total > 0) {
+				statusProgress.value = current;
+				statusProgress.max = total;
+			} else {
+				statusProgress.removeAttribute('value');
+				statusProgress.removeAttribute('max');
+			}
+		},
+	});
+	engine.config.args = ['--main-pack', pack].concat(engine.config.args);
+	function run() {
+		startButton.disabled = true;
+		engine.start().then(() => {
+			setStatusMode('hidden');
+			const c = document.getElementById('canvas');
+			if (c) c.focus();
+		}, displayFailureNotice);
+	}
+	Promise.all([engine.init(exe), engine.preloadFile(pack, pack)]).then(() => {
+		if (params.get('autostart') === '1' || params.get('start') === '1') {
+			run();
+			return;
+		}
+		statusProgress.style.display = 'none';
+		document.getElementById('status-text').textContent = 'REFRACT · 折光';
+		startButton.style.display = 'block';
+		startHint.style.display = 'block';
+		startButton.focus();
+		startButton.addEventListener('click', run, { once: true });
+	}, displayFailureNotice);
+}());
+		</script>
+	</body>
+</html>
+

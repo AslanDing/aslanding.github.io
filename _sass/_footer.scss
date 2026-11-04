@@ -53,6 +53,31 @@
   }
 }
 
+/* the visitor map and the game cover, side by side (they wrap on a narrow screen) */
+.footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 0.5em;
+
+  img {
+    display: block;
+  }
+}
+
+.footer-game img {
+  image-rendering: pixelated;
+  border-radius: 2px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.footer-game:hover img,
+.footer-game:focus img {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
 .page__footer-copyright {
   font-family: $global-font-family;
   font-size: $type-size-7;
