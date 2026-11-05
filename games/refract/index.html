@@ -41,8 +41,9 @@ body { color: #c6f1ff; background-color: #0b0e1a; overflow: hidden; touch-action
 			<div id="status-text">REFRACT · 加载中</div>
 			<progress id="status-progress"></progress>
 			<button id="status-start" type="button">点击开始 · CLICK TO START</button>
-			<div id="status-hint">WASD 移动 · 左键 攻击 · 空格 闪避 · 右键 射击 · F11 / 游戏内按钮 全屏<br>
+			<div id="status-hint">WASD 移动 · 左键 或 J 攻击 · 空格 闪避 · 右键 射击 · F11 / 游戏内按钮 全屏<br>
 				声音默认关闭，按 M 键或在标题菜单打开<br>
+				笔记本触控板：Windows 在按住按键时会忽略轻触，移动中请用 J 攻击（或按下触控板、用鼠标）<br>
 				Chrome / Edge / Firefox 桌面版 · 存档在浏览器本地</div>
 			<div id="status-notice"></div>
 		</div>
@@ -60,8 +61,9 @@ body { color: #c6f1ff; background-color: #0b0e1a; overflow: hidden; touch-action
 		document.documentElement.lang = 'en';
 		document.getElementById('home').textContent = '← Back to the homepage';
 		document.getElementById('status-text').textContent = 'REFRACT · loading';
-		document.getElementById('status-hint').innerHTML = 'WASD move · left click attack · Space dodge · right click shoot · F11 / in-game button fullscreen<br>'
+		document.getElementById('status-hint').innerHTML = 'WASD move · left click or J attack · Space dodge · right click shoot · F11 / in-game button fullscreen<br>'
 			+ 'Sound is off by default: press M or use the title menu to turn it on<br>'
+			+ 'Laptop touchpad: Windows ignores taps while a key is held, so attack with J while moving (or press the pad, or use a mouse)<br>'
 			+ 'Desktop Chrome / Edge / Firefox · saves stay in this browser';
 	}
 	// 0) exact canvas sizing (export uses canvas_resize_policy = None). Godot's own adaptive sizing floors the
@@ -151,7 +153,7 @@ body { color: #c6f1ff; background-color: #0b0e1a; overflow: hidden; touch-action
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":16494224,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":16497500,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -196,6 +198,7 @@ const engine = new Engine(GODOT_CONFIG);
 	setStatusMode('progress');
 	const startButton = document.getElementById('status-start');
 	const startHint = document.getElementById('status-hint');
+	startHint.style.display = 'block';      // the controls, the sound and the touchpad note show while it loads
 	const params = new URLSearchParams(window.location.search);
 	const exe = GODOT_CONFIG.executable;
 	const pack = GODOT_CONFIG.mainPack || (exe + '.pck');
