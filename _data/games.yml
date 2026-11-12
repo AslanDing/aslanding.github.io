@@ -1,0 +1,27 @@
+# The games listed at /games/ (the footer's negative visitor map links there), newest first.
+# To add a game: copy its web build into /games/<id>/, a cover (about 394x222, 16:9) into /images/, and add an entry.
+#   url        where "Play" goes
+#   cover      the card's picture
+#   pixel      true for pixel art (scaled without smoothing)
+#   blurb      a sentence or two
+#   facts      short lines under the blurb
+#   note       small print (sound, controls)
+
+- id: refract
+  title: REFRACT
+  subtitle: 折光
+  url: /games/refract/?start=1
+  cover: /images/refract-cover.png
+  pixel: true
+  year: 2026
+  tags: [Action roguelike, Pixel art, Godot 4]
+  blurb: >-
+    Dive into a living prism: fight through crystal caves, a sunken archive and a gear foundry, or take the
+    branching paths through a greenhouse and a mirror lake, solve the puzzles every floor hides, and face the
+    Heart of the Prism at the bottom.
+  facts:
+    - Seven classes, from sword and bow to shield, scythe and staff
+    - Five regions, eleven bosses, puzzle rooms on every floor
+    - Endless, daily and weekly runs; English and 中文
+  note: >-
+    Plays in the browser with a keyboard, a mouse or a gamepad. Sound starts off: press M to turn it on.
