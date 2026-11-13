@@ -11,6 +11,8 @@ redirect_from:
 Conference, Journal, and Workshop Papers
 -------
 
+- **Xu Zheng**, Zhuomin Chen, Esteban Schafir, Sipeng Chen, Hojat Allah Salehi, Haifeng Chen, Farhad Shirani, Mo Sha, Wei Cheng, Dongsheng Luo. *Towards Structurally Graph-Based Explainable Machine-Generated Text Detection* (LM<sup>2</sup>otifs). **Findings of EACL 2027**. [paper](https://arxiv.org/abs/2505.12507)
+
 - **Xu Zheng**, Chaohao Lin, Sipeng Chen, Zhuomin Chen, Jimeng Shi, Jayantha Obeysekera, Jingchao Ni, Wei Cheng, Jason Liu, Dongsheng Luo. *Uncovering Insights of Compound Flooding with Data-Driven AI*. **KDD 2026**. [paper](https://doi.org/10.1145/3770855.3818951), [code (SF<sup>2</sup>Bench)](https://github.com/AslanDing/SFBench)
 
 - Zhuomin Chen, Hojat Allah Salehi, Esteban Schafir, **Xu Zheng**, Jiaxing Zhang, Hua Wei, Jingchao Ni, Farhad Shirani, Dongsheng Luo. *Addressing Structural Distribution Shift in Explanations for Graph Neural Networks*. **IEEE TPAMI 2026**. [paper](https://doi.org/10.1109/TPAMI.2026.3690304)
@@ -43,8 +45,6 @@ Preprints
 - **Xu Zheng**, Chaohao Lin, Zhuomin Chen, Weijieying Ren, Haifeng Chen, Wei Cheng, Dongsheng Luo. *Bridging Inference-Time Scaling and Episodic Memory with Action-Centric Graphs*. arXiv preprint, 2026. [paper](https://arxiv.org/abs/2607.27415)
 
 - **Xu Zheng**, Zhuomin Chen, Chaohao Lin, Hua Wei, Haifeng Chen, Wei Cheng, Dongsheng Luo. *Leveraging Trajectory Graphs for Pre-Execution Error Diagnosis in Agentic LLM Systems*. arXiv preprint, 2026. [paper](https://arxiv.org/abs/2607.27443)
-
-- **Xu Zheng**, Zhuomin Chen, Esteban Schafir, Sipeng Chen, Hojat Allah Salehi, Haifeng Chen, Farhad Shirani, Wei Cheng, Dongsheng Luo. *LM<sup>2</sup>otifs: An Explainable Framework for Machine-Generated Texts Detection*. arXiv preprint, 2025. [paper](https://arxiv.org/abs/2505.12507)
 
 - **Xu Zheng**\*, Farhad Shirani\*, Tianchun Wang, Shouwei Gao, Wenqian Dong, Wei Cheng, Dongsheng Luo. *PAC Learnability under Explanation-Preserving Graph Perturbations*. arXiv preprint, 2024. [paper](https://arxiv.org/abs/2402.05039)
 

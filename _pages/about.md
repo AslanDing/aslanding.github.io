@@ -50,6 +50,7 @@ Service Experience
 
 Publications
 -------
+- One paper (LM<sup>2</sup>otifs) accepted by **Findings of EACL 2027**
 - One paper (SF<sup>2</sup>Bench) accepted by **KDD 2026**
 - Co-authored papers accepted by **IEEE TPAMI**, **AAAI 2026**, and **IPDPS 2026**
 - One paper (F-Fidelity) accepted by **ICLR 2025**
