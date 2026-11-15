@@ -27,6 +27,27 @@
   note: >-
     In Chinese for now. Plays in the browser with a keyboard and mouse; saves stay in this browser.
 
+- id: downspire
+  title: DOWNSPIRE
+  subtitle: 倒塔
+  accent: "#3a7f86"
+  url: /games/downspire/?start=1
+  cover: /images/downspire-cover.png
+  pixel: true
+  year: 2026
+  tags: [Demo, Action roguelike, Pixel art, Godot 4]
+  blurb: >-
+    An upside-down tower hangs in a pit, and you climb down it: eight floors through stone halls, a lava cave, a
+    sunken city and the spire's tip, each one collapsing on a timer, a boss at the end of every act and a gate at
+    the very bottom.
+  facts:
+    - Eight races and eight weapon families, each with its own moves
+    - Solo, or co-op and versus for up to four on one computer, with rule-based bots as team mates or rivals
+    - This demo leaves out online play and the LLM Agents; English and 中文
+  note: >-
+    Plays in the browser with a keyboard and mouse or a gamepad; the first load is about 120 MB. Saves stay in
+    this browser.
+
 - id: refract
   title: REFRACT
   subtitle: 折光
