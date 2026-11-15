@@ -16,7 +16,7 @@ author_profile: true
       <img src="{{ base_path }}{{ game.cover }}" alt="{{ game.title }}" loading="lazy" />
     </a>
     <div class="game-card__body">
-      <h2 class="game-card__title">{{ game.title }}{% if game.subtitle %} <span class="game-card__subtitle">{{ game.subtitle }}</span>{% endif %}</h2>
+      <h2 class="game-card__title">{{ game.title }}{% if game.subtitle %} <span class="game-card__subtitle"{% if game.accent %} style="color: {{ game.accent }}"{% endif %}>{{ game.subtitle }}</span>{% endif %}</h2>
       {% if game.tags or game.year %}
       <p class="game-card__tags">
         {% for tag in game.tags %}<span class="game-card__tag">{{ tag }}</span>{% endfor %}

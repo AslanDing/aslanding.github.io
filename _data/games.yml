@@ -6,6 +6,26 @@
 #   blurb      a sentence or two
 #   facts      short lines under the blurb
 #   note       small print (sound, controls)
+#   accent     the subtitle's colour (the default is REFRACT's pink)
+
+- id: jiuding
+  title: JIUDING
+  subtitle: 九鼎
+  accent: "#a8742c"
+  url: /games/jiuding/
+  cover: /images/jiuding-cover.png
+  year: 2026
+  tags: [Demo, Monster hunting, Pixel art, Godot 4]
+  blurb: >-
+    A hunter of the Xia, sent out by Yu the Great after the strange beasts of the Classic of Mountains and Seas:
+    track them, break their horns and shells, take them alive or kill them, and cast their likeness on a bronze
+    cauldron. This demo is the first province, Yuzhou.
+  facts:
+    - Three beasts, each a five-to-ten-minute fight with stages and parts to break
+    - Axe, dagger-axe, bow and bronze drum, forged from what you carve
+    - Requests, patrols, steles to rub, and Yuzhou's cauldron to cast
+  note: >-
+    In Chinese for now. Plays in the browser with a keyboard and mouse; saves stay in this browser.
 
 - id: refract
   title: REFRACT
