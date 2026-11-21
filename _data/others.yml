@@ -144,3 +144,21 @@
         - Ten visual styles, from ink wash and 2.5D guofeng animation to live action, and a prompt lab for trying a change on one project before adopting it
       note: >-
         Click the picture to see the interface.
+
+    - title: MULTI-CAMERA ARM CONTROL
+      subtitle: 多相机机械臂按键
+      accent: "#3a6ea5"
+      icon: /images/others/workflow-arm-icon.gif
+      preview: /images/others/workflow-arm.gif
+      year: 2026
+      tags: [Local VLM, Robotics, Multi-camera, ArUco, Automation]
+      blurb: >-
+        A local vision-language model watches a device through several cameras and drives a five-joint robot arm
+        that presses the device's keys and touch screen with a stylus.
+      facts:
+        - Phones over Wi-Fi and USB webcams, five at once; a setup check reports what each camera sees (markers, resolution, glare, pixels per millimetre) and which one is close enough to read the screen
+        - ArUco markers on the device's corners and on the stylus holder locate the device and the tool in every view
+        - Five servos driven over a serial port in small steps, each step checked by the cameras; the arm backs off when the tool comes too close to the device
+        - Self-calibration that first measures each joint's range, then moves the joints together toward a series of targets
+      note: >-
+        Click the picture to see the setup.
