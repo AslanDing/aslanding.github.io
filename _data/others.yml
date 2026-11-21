@@ -74,14 +74,73 @@
         Plays in the browser with a keyboard, a mouse or a gamepad. Sound starts off: press M to turn it on.
 
 # url: the Google Drive link, shared as "Anyone with the link can view"
+# icon: a square crop of the episode's title card, above the title text
 - id: videos
   title: Videos
   title_zh: 视频
   action: Watch
-  items: []
+  items:
+    - title: THE TAOIST OF LAOSHAN
+      subtitle: 崂山道士
+      accent: "#7d8a6a"
+      icon: /images/others/video-laoshan.jpg
+      url: https://drive.google.com/file/d/11Jbdyy6oCD8njJSUFuImJG6uqos15vBL/view?usp=sharing
+      year: 2026
+      tags: [AI video, Episode 1, Adaptation]
+      blurb: >-
+        The Laoshan tale from Pu Songling's Strange Tales from a Chinese Studio (聊斋志异), retold as a series.
+        Episode 1, 世家子弟寻仙踪 (A Son of a Great Family Seeks the Immortals).
+      note: >-
+        In Chinese. Made with the NovelVid pipeline below; the video opens on Google Drive.
 
-# description only: no url, so no button and no link
+    - title: JOURNEY TO THE WEST, A SIDE STORY
+      subtitle: 西游外传
+      accent: "#b8892e"
+      icon: /images/others/video-xiyou.jpg
+      url: https://drive.google.com/file/d/1KWN2nQpPPQTR60NZeNe9fpE_D3tJcGvi/view?usp=sharing
+      year: 2026
+      tags: [AI video, Episode 1, Original story]
+      blurb: >-
+        Tang Sanzang and his disciples reach a kingdom where nobody can speak, because a demon has taken everyone's
+        voice. Episode 1, 开口者三魂俱灭 (Whoever Speaks Loses All Three Souls).
+      note: >-
+        In Chinese. Made with the NovelVid pipeline below; the video opens on Google Drive.
+
+    - title: THE SILENT ERA
+      subtitle: 静默纪元
+      accent: "#3f74a8"
+      icon: /images/others/video-silent.jpg
+      url: https://drive.google.com/file/d/1kvQbAf3TH55cKdaQb4IAWicuV9zrc_Cn/view?usp=sharing
+      year: 2026
+      tags: [AI video, Episode 1, Science fiction]
+      blurb: >-
+        Humans explore another planet, whose main species is born in water, lives on land in its youth, and grows
+        wings and takes to the sky as an adult. Episode 1, 异星醒来 (Waking on an Alien World).
+      note: >-
+        In Chinese. Made with the NovelVid pipeline below; the video opens on Google Drive.
+
+# description only: no url, so no button and no link out
+# preview: a larger picture (a GIF) that opens in the page's own lightbox when the icon is clicked
 - id: workflows
   title: Workflows
   title_zh: 工作流
-  items: []
+  items:
+    - title: NOVELVID
+      subtitle: 片场
+      accent: "#2bb5a0"
+      icon: /images/others/workflow-novelvid-icon.gif
+      preview: /images/others/workflow-novelvid.gif
+      year: 2026
+      tags: [AI video, Local LLM, ComfyUI, TTS, Automation]
+      blurb: >-
+        A pipeline that runs on my own computer and turns a novel, a classical Chinese tale, or a one-line idea into
+        finished video episodes. A local language model writes and ComfyUI draws, taking turns on one GPU; a
+        background worker runs the steps in order and checks each result before the next step starts. The three
+        videos above were made with it.
+      facts:
+        - "Writing (LLM): episodes, script, casting, storyboard, voice and music design, keyframe prompts, camera moves"
+        - "Production (ComfyUI and TTS): character looks, keyframes, voices, music, video clips, upscaling, the final cut"
+        - Quality gates on every clip (decoding, frame count, motion, faces, style drift), and an LLM review that sends a failed keyframe or clip back for another take
+        - Ten visual styles, from ink wash and 2.5D guofeng animation to live action, and a prompt lab for trying a change on one project before adopting it
+      note: >-
+        Click the picture to see the interface.

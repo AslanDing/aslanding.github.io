@@ -31,9 +31,10 @@ redirect_from:
   {% endif %}
   <article class="others-item">
     <div class="others-item__icon">
-      {% if item.url %}<a href="{{ item_href }}"{% if item_external %} target="_blank" rel="noopener"{% endif %} title="{{ section.action | default: 'Open' }} {{ item.title }}">{% endif %}
+      {% if item.url %}<a href="{{ item_href }}"{% if item_external %} target="_blank" rel="noopener"{% endif %} title="{{ section.action | default: 'Open' }} {{ item.title }}">
+      {% elsif item.preview %}<a href="{{ base_path }}{{ item.preview }}" class="image-popup" title="{{ item.title }}">{% endif %}
       <img src="{{ base_path }}{{ item.icon }}" alt="{{ item.title }}" width="96" height="96" loading="lazy" />
-      {% if item.url %}</a>{% endif %}
+      {% if item.url or item.preview %}</a>{% endif %}
     </div>
     <div class="others-item__body">
       <h3 class="others-item__title">{{ item.title }}{% if item.subtitle %} <span class="others-item__subtitle"{% if item.accent %} style="color: {{ item.accent }}"{% endif %}>{{ item.subtitle }}</span>{% endif %}</h3>
