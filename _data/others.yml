@@ -18,6 +18,24 @@
   title_zh: 游戏
   action: Play
   items:
+    - title: REFRACT
+      subtitle: 折光
+      accent: "#d65a8c"
+      icon: /images/others/refract.png
+      url: /refract/?start=1
+      year: 2026
+      tags: [Action roguelike, Pixel art, Godot 4]
+      blurb: >-
+        Dive into a living prism: fight through crystal caves, a sunken archive and a gear foundry, or take the
+        branching paths through a greenhouse and a mirror lake, solve the puzzles every floor hides, and face the
+        Heart of the Prism at the bottom.
+      facts:
+        - Seven classes, from sword and bow to shield, scythe and staff
+        - Five regions, eleven bosses, puzzle rooms on every floor
+        - Endless, daily and weekly runs; English and 中文
+      note: >-
+        Plays in the browser with a keyboard, a mouse or a gamepad. Sound starts off: press M to turn it on.
+
     - title: JIUDING
       subtitle: 九鼎
       accent: "#a8742c"
@@ -55,31 +73,26 @@
         Plays in the browser with a keyboard and mouse or a gamepad; the first load is about 120 MB. Saves stay in
         this browser.
 
-    - title: REFRACT
-      subtitle: 折光
-      accent: "#d65a8c"
-      icon: /images/others/refract.png
-      url: /refract/?start=1
-      year: 2026
-      tags: [Action roguelike, Pixel art, Godot 4]
-      blurb: >-
-        Dive into a living prism: fight through crystal caves, a sunken archive and a gear foundry, or take the
-        branching paths through a greenhouse and a mirror lake, solve the puzzles every floor hides, and face the
-        Heart of the Prism at the bottom.
-      facts:
-        - Seven classes, from sword and bow to shield, scythe and staff
-        - Five regions, eleven bosses, puzzle rooms on every floor
-        - Endless, daily and weekly runs; English and 中文
-      note: >-
-        Plays in the browser with a keyboard, a mouse or a gamepad. Sound starts off: press M to turn it on.
-
 # url: the Google Drive link, shared as "Anyone with the link can view"
 # icon: a square crop of the episode's title card, above the title text
 - id: videos
-  title: Videos
-  title_zh: 视频
+  title: Videos (automatic AI video generation)
+  title_zh: 视频（AI 自动生成）
   action: Watch
   items:
+    - title: THE SILENT ERA
+      subtitle: 静默纪元
+      accent: "#3f74a8"
+      icon: /images/others/video-silent.jpg
+      url: https://drive.google.com/file/d/1kvQbAf3TH55cKdaQb4IAWicuV9zrc_Cn/view?usp=sharing
+      year: 2026
+      tags: [AI video, Episode 1, Science fiction]
+      blurb: >-
+        Humans explore another planet, whose main species is born in water, lives on land in its youth, and grows
+        wings and takes to the sky as an adult. Episode 1, 异星醒来 (Waking on an Alien World).
+      note: >-
+        In Chinese. Made with the NovelVid pipeline below; the video opens on Google Drive.
+
     - title: THE TAOIST OF LAOSHAN
       subtitle: 崂山道士
       accent: "#7d8a6a"
@@ -103,19 +116,6 @@
       blurb: >-
         Tang Sanzang and his disciples reach a kingdom where nobody can speak, because a demon has taken everyone's
         voice. Episode 1, 开口者三魂俱灭 (Whoever Speaks Loses All Three Souls).
-      note: >-
-        In Chinese. Made with the NovelVid pipeline below; the video opens on Google Drive.
-
-    - title: THE SILENT ERA
-      subtitle: 静默纪元
-      accent: "#3f74a8"
-      icon: /images/others/video-silent.jpg
-      url: https://drive.google.com/file/d/1kvQbAf3TH55cKdaQb4IAWicuV9zrc_Cn/view?usp=sharing
-      year: 2026
-      tags: [AI video, Episode 1, Science fiction]
-      blurb: >-
-        Humans explore another planet, whose main species is born in water, lives on land in its youth, and grows
-        wings and takes to the sky as an adult. Episode 1, 异星醒来 (Waking on an Alien World).
       note: >-
         In Chinese. Made with the NovelVid pipeline below; the video opens on Google Drive.
 
