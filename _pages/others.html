@@ -1,0 +1,61 @@
+---
+layout: archive
+title: "Others"
+permalink: /others/
+author_profile: true
+redirect_from:
+  - /games/
+---
+
+{% include base_path %}
+
+<div class="others-intro">
+  <p>Projects I build outside my research: games, videos, and automated workflows. If something here is close to what you work on, I'm happy to talk.</p>
+  <p lang="zh">这里是我在研究之外做的项目：游戏、视频和自动化工作流。如果其中有和你的工作相近的内容，欢迎联系我。</p>
+</div>
+
+{% for section in site.data.others %}
+{% if section.items and section.items.size > 0 %}
+<section class="others-section" id="{{ section.id }}">
+  <h2 class="others-section__title">{{ section.title }}{% if section.title_zh %} <span class="others-section__title-zh">{{ section.title_zh }}</span>{% endif %}</h2>
+
+  {% for item in section.items %}
+  {% if item.url %}
+    {% if item.url contains "://" %}
+      {% assign item_href = item.url %}
+      {% assign item_external = true %}
+    {% else %}
+      {% assign item_href = base_path | append: item.url %}
+      {% assign item_external = false %}
+    {% endif %}
+  {% endif %}
+  <article class="others-item">
+    <div class="others-item__icon">
+      {% if item.url %}<a href="{{ item_href }}"{% if item_external %} target="_blank" rel="noopener"{% endif %} title="{{ section.action | default: 'Open' }} {{ item.title }}">{% endif %}
+      <img src="{{ base_path }}{{ item.icon }}" alt="{{ item.title }}" width="96" height="96" loading="lazy" />
+      {% if item.url %}</a>{% endif %}
+    </div>
+    <div class="others-item__body">
+      <h3 class="others-item__title">{{ item.title }}{% if item.subtitle %} <span class="others-item__subtitle"{% if item.accent %} style="color: {{ item.accent }}"{% endif %}>{{ item.subtitle }}</span>{% endif %}</h3>
+      {% if item.tags or item.year %}
+      <p class="others-item__tags">
+        {% for tag in item.tags %}<span class="others-item__tag">{{ tag }}</span>{% endfor %}
+        {% if item.year %}<span class="others-item__year">{{ item.year }}</span>{% endif %}
+      </p>
+      {% endif %}
+      {% if item.blurb %}<p class="others-item__blurb">{{ item.blurb }}</p>{% endif %}
+      {% if item.facts %}
+      <ul class="others-item__facts">
+        {% for fact in item.facts %}<li>{{ fact }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      {% if item.url and section.action %}
+      <p class="others-item__actions"><a class="btn btn--info others-item__button" href="{{ item_href }}"{% if item_external %} target="_blank" rel="noopener"{% endif %}>{{ section.action }}</a></p>
+      {% endif %}
+      {% if item.note %}<p class="others-item__note">{{ item.note }}</p>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
+{% endif %}
+{% endfor %}

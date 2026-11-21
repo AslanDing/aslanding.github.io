@@ -5,6 +5,10 @@ main:
 
   - title: "CV"
     url: /files/Xu_Zheng_CV.pdf
+
+  - title: "Others"
+    url: /others/
+
 #  - title: "Talks"
 #    url: /talks/
 

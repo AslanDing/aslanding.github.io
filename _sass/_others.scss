@@ -1,0 +1,157 @@
+/* ==========================================================================
+   OTHERS (/others/: games, videos and workflows, listed in _data/others.yml)
+   Each entry is an icon on the left and its text on the right, on a phone too.
+   ========================================================================== */
+
+.others-intro {
+  margin-bottom: 1.5em;
+  color: $gray;
+
+  p {
+    margin: 0 0 0.4em;
+  }
+}
+
+.others-section {
+  margin-bottom: 2em;
+}
+
+.page__content .others-section__title,
+.others-section__title {
+  margin-top: 1em;
+}
+
+.others-section__title-zh {
+  margin-left: 0.3em;
+  color: $gray;
+  font-weight: normal;
+}
+
+.others-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2em;
+  padding: 1.2em 0;
+  border-bottom: 1px solid $light-gray;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.others-item__icon {
+  flex: 0 0 96px;
+
+  a {
+    display: block;
+    border-radius: $border-radius;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+  }
+
+  img {
+    display: block;
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border: 1px solid $light-gray;
+    border-radius: $border-radius;
+    background-color: #0b0e1a;
+  }
+}
+
+.others-item__body {
+  flex: 1;
+  min-width: 0;                         /* lets long words wrap instead of pushing the icon off the row */
+}
+
+.page__content .others-item__title,
+.others-item__title {
+  margin: 0 0 0.3em;
+  padding: 0;
+  border: 0;
+  font-size: $type-size-4;
+  letter-spacing: 0.04em;
+}
+
+.others-item__subtitle {
+  margin-left: 0.25em;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+.others-item__tags {
+  margin: 0 0 0.6em;
+  font-size: $type-size-7;
+  line-height: 2;
+}
+
+.others-item__tag,
+.others-item__year {
+  display: inline-block;
+  margin: 0 0.4em 0 0;
+  padding: 0 0.6em;
+  border-radius: 1em;
+  background-color: $lighter-gray;
+  color: $dark-gray;
+  white-space: nowrap;
+}
+
+.others-item__year {
+  background-color: transparent;
+  color: $gray;
+}
+
+.others-item__blurb {
+  margin: 0 0 0.5em;
+  font-size: $type-size-6;
+  line-height: 1.6;
+}
+
+.others-item__facts {
+  margin: 0 0 0.8em;
+  padding-left: 1.2em;
+  font-size: $type-size-6;
+  color: $dark-gray;
+
+  li {
+    margin-bottom: 0.15em;
+  }
+}
+
+.others-item__actions {
+  margin: 0 0 0.4em;
+}
+
+.others-item__button {
+  padding: 0.45em 1.5em;
+  font-size: $type-size-6;
+  letter-spacing: 0.08em;
+}
+
+.others-item__note {
+  margin: 0;
+  font-size: $type-size-7;
+  color: $gray;
+}
+
+/* a phone: the same row, a smaller icon */
+@media (max-width: 600px) {
+  .others-item {
+    gap: 0.9em;
+  }
+
+  .others-item__icon {
+    flex-basis: 64px;
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

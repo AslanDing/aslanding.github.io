@@ -1,0 +1,87 @@
+# The Others page (/others/): games, videos and workflows, each entry an icon on the left and its text on the right.
+# The top navigation and the footer's negative visitor map both link there. /games/ redirects to it.
+#
+# A section with no items is not shown. Fields of an item:
+#   title, subtitle   the name; the subtitle (the Chinese name) takes the colour in `accent`
+#   icon              a square picture in /images/others/, 160x160 (shown at 96 px, 64 px on a phone)
+#   url               where the section's button and the icon go. A path such as /refract/ stays on this site;
+#                     a full https:// address (a Google Drive video) opens in a new tab. Leave it out for no button.
+#   year, tags        small print under the title
+#   blurb, facts      a sentence or two, then short lines
+#   note              small print at the bottom
+#
+# Each game is its own repository whose GitHub Pages site is aslanding.github.io/<repo>/
+# (github.com/AslanDing/refract, /downspire, /jiuding); this repository keeps only the icons.
+
+- id: games
+  title: Games
+  title_zh: 游戏
+  action: Play
+  items:
+    - title: JIUDING
+      subtitle: 九鼎
+      accent: "#a8742c"
+      icon: /images/others/jiuding.png
+      url: /jiuding/
+      year: 2026
+      tags: [Demo, Monster hunting, Pixel art, Godot 4]
+      blurb: >-
+        A hunter of the Xia, sent out by Yu the Great after the strange beasts of the Classic of Mountains and Seas:
+        track them, break their horns and shells, take them alive or kill them, and cast their likeness on a bronze
+        cauldron. This demo is the first province, Yuzhou.
+      facts:
+        - Three beasts, each a five-to-ten-minute fight with stages and parts to break
+        - Axe, dagger-axe, bow and bronze drum, forged from what you carve
+        - Requests, patrols, steles to rub, and Yuzhou's cauldron to cast
+      note: >-
+        In Chinese for now. Plays in the browser with a keyboard and mouse; saves stay in this browser.
+
+    - title: DOWNSPIRE
+      subtitle: 倒塔
+      accent: "#3a7f86"
+      icon: /images/others/downspire.png
+      url: /downspire/?start=1
+      year: 2026
+      tags: [Demo, Action roguelike, Pixel art, Godot 4]
+      blurb: >-
+        An upside-down tower hangs in a pit, and you climb down it: eight floors through stone halls, a lava cave, a
+        sunken city and the spire's tip, each one collapsing on a timer, a boss at the end of every act and a gate at
+        the very bottom.
+      facts:
+        - Eight races and eight weapon families, each with its own moves
+        - Solo, or co-op and versus for up to four on one computer, with rule-based bots as team mates or rivals
+        - This demo leaves out online play and the LLM Agents; English and 中文
+      note: >-
+        Plays in the browser with a keyboard and mouse or a gamepad; the first load is about 120 MB. Saves stay in
+        this browser.
+
+    - title: REFRACT
+      subtitle: 折光
+      accent: "#d65a8c"
+      icon: /images/others/refract.png
+      url: /refract/?start=1
+      year: 2026
+      tags: [Action roguelike, Pixel art, Godot 4]
+      blurb: >-
+        Dive into a living prism: fight through crystal caves, a sunken archive and a gear foundry, or take the
+        branching paths through a greenhouse and a mirror lake, solve the puzzles every floor hides, and face the
+        Heart of the Prism at the bottom.
+      facts:
+        - Seven classes, from sword and bow to shield, scythe and staff
+        - Five regions, eleven bosses, puzzle rooms on every floor
+        - Endless, daily and weekly runs; English and 中文
+      note: >-
+        Plays in the browser with a keyboard, a mouse or a gamepad. Sound starts off: press M to turn it on.
+
+# url: the Google Drive link, shared as "Anyone with the link can view"
+- id: videos
+  title: Videos
+  title_zh: 视频
+  action: Watch
+  items: []
+
+# description only: no url, so no button and no link
+- id: workflows
+  title: Workflows
+  title_zh: 工作流
+  items: []
